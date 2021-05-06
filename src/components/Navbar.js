@@ -8,17 +8,28 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="navbar fixed-top  flex-md-nowrap p-0 shadow">
-        <a
-          className="navbar-brand col-sm-3 col-md-2 mr-0"
-          href="#"
-          onClick={(event) => {
-            this.setState({ currentForm: 'home' })
+        <ul>
+          <li><a
+            className="navbar-brand col-sm-3 col-md-2 mr-0"
 
-          }}
-        >
-          CypherCoin
-          </a>
-
+            onClick={(event) => {
+              console.log("nav click")
+              //this.setState({ currentForm: 'buy' })
+            }}
+          >
+            CypherCoin
+          </a></li>
+          <li><a
+            className="navbar-brand col-sm-3 col-md-2 mr-0"
+            href="#"
+            onClick={(event) => {
+              console.log(this.props.currentForm)
+              //this.setState({ currentForm: 'buy' })
+            }}
+          >
+            Wallet
+          </a></li>
+        </ul>
         <ul className="navbar-nav px-3">
           <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
             <small className="text-secondary">
